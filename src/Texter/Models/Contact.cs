@@ -15,10 +15,10 @@ namespace Texter.Models
         [Required]
         public string PhoneNumber { get; set; }
 
-        public void ConvertPhoneNumber(Contact contact)
+        public void ConvertPhoneNumber()
         {
-            var currentNumber = contact.PhoneNumber;
-            contact.PhoneNumber = "+1" + currentNumber;
+            var currentNumber = this.PhoneNumber;
+            this.PhoneNumber = "+1" + currentNumber;
         }
     }
 

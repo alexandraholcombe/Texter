@@ -9,10 +9,10 @@
 <hr />
 @using (Html.BeginForm("SendMessage", "Home", FormMethod.Post, Model.Message))
 {
-    @Html.LabelFor(model => model.Message.To)
-    @Html.TextBoxFor(model => model.Message.To)
     @Html.LabelFor(model => model.Message.From)
-    @Html.DropDownListFor(model => model.Message.From, Model.Contacts)
+    @Html.TextBoxFor(model => model.Message.From)
+    @Html.LabelFor(model => model.Message.To)
+    @Html.DropDownListFor(model => model.Message.To, Model.Contacts)
     @Html.LabelFor(model => model.Message.Body)
     @Html.TextBoxFor(model => model.Message.Body)
     <input type="submit" value="Send!" />

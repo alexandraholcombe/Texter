@@ -25,6 +25,7 @@ namespace Texter.Controllers
         [HttpPost]
         public IActionResult Create(Contact contact)
         {
+            contact.ConvertPhoneNumber();
             db.Contacts.Add(contact);
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -39,9 +39,6 @@ namespace Texter.Controllers
         {
             SendMessageViewModel model = new SendMessageViewModel();
             model.DbContacts = db.Contacts.ToList();
-            //model.Message = new Message();
-            //model.Message.To = "+12069543205";
-            //model.Message.From = "+12065391391";
             return View(model);
         }
 
