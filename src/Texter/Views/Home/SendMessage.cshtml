@@ -12,8 +12,7 @@
     @Html.LabelFor(model => model.Message.To)
     @Html.TextBoxFor(model => model.Message.To)
     @Html.LabelFor(model => model.Message.From)
-    @Html.DropDownListFor(model => model.Message.From, new SelectList(
-        Model.Contacts, "FirstName", "PhoneNumber"))
+    @Html.DropDownListFor(model => model.Message.From, Model.Contacts)
     @Html.LabelFor(model => model.Message.Body)
     @Html.TextBoxFor(model => model.Message.Body)
     <input type="submit" value="Send!" />
